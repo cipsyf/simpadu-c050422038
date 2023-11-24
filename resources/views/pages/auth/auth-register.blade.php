@@ -15,6 +15,7 @@
         </div>
 
         <div class="card-body">
+
             <form method="POST">
                 @csrf
                     <div class="form-group ">
@@ -63,15 +64,15 @@
                             </div>
                             @enderror
                     </div>
-                    <div class="form-group ">
+                    <div class="form-group">
                         <label for="password2"
                             class="d-block">Password Confirmation</label>
                         <input id="password2"
                             type="password"
-                            class="form-control" @error('password2')
+                            class="form-control @error('password2')
                                 is-invalid
-                            @enderror
-                            name="password-confirm">
+                            @enderror"
+                            name="password_confirmation">
                             @error('password2')
                             <div class="invalid-feedback">
                                 {{ $message }}
@@ -86,6 +87,9 @@
                 </div>
             </form>
         </div>
+    </div>
+    <div class="text-muted mt-5 text-center">
+        Already have an account? <a href="{{route('login')}}">Login</a>
     </div>
 @endsection
 
