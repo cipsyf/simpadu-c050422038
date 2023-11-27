@@ -21,6 +21,7 @@ class UserSeeder extends Seeder
             'email' => 'syifa.nadya070@gmail.com',
             'email_verified_at' => now(),
             'password' => Hash::make('123456'),
+            'roles' => 'mahasiswa',
         ]);
     }
 }
